@@ -1,0 +1,235 @@
+/* 
+   estilosIA.css
+   Diseño Accesible y Responsivo para Centro de Recetas
+   Paleta accesible: Azul Marino Oscuro (#003366), Amarillo Cálido (#FFCC00), Fondo (#F9F9F9), Texto (#1A1A1A)
+*/
+
+/* Reset e Identificación Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #1a1a1a;
+    font-size: 18px; /* Tamaño accesible para fácil lectura */
+}
+
+/* Indicadores de Foco para Discapacidades Motrices / Navegación por Teclado */
+a:focus, button:focus, input:focus, select:focus, summary:focus {
+    outline: 4px solid #ffcc00 !important;
+    outline-offset: 3px !important;
+}
+
+/* Encabezado Principal */
+.header-main {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid #ffcc00;
+}
+
+.header-main h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Barra de Navegación */
+.nav-bar {
+    background-color: #002244;
+    padding: 0.75rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    background-color: #ffcc00;
+    color: #002244;
+    text-decoration: none;
+}
+
+/* Contenido Principal */
+.main-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.section-block {
+    background-color: #ffffff;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    color: #003366;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.5rem;
+}
+
+/* Controles de Filtrado Estático */
+.filter-container {
+    background-color: #e6f0fa;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.filter-group {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.radio-label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    border: 2px solid #003366;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-label input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #003366;
+}
+
+/* Cuadrícula de Recetas */
+.recipes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Tarjeta de Receta Encuadrada */
+.recipe-card {
+    background-color: #ffffff;
+    border: 3px solid #003366; /* Borde específico solicitado */
+    border-radius: 8px;
+    padding: 1.2rem; /* Relleno armónico */
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border: 2px solid #333333;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.recipe-name {
+    font-size: 1.25rem;
+    color: #003366;
+    margin-bottom: 1rem;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: #003366;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.75rem 1.2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid #002244;
+    transition: background-color 0.2s;
+}
+
+.btn-download:hover {
+    background-color: #ffcc00;
+    color: #002244;
+}
+
+/* Lógica Estática CSS de Selección/Filtrado usando :checked e ~ */
+#cat-todas:checked ~ .recipes-grid .recipe-card {
+    display: flex;
+}
+
+#cat-dulces:checked ~ .recipes-grid .recipe-card {
+    display: none;
+}
+#cat-dulces:checked ~ .recipes-grid .recipe-card.dulce {
+    display: flex;
+}
+
+#cat-saladas:checked ~ .recipes-grid .recipe-card {
+    display: none;
+}
+#cat-saladas:checked ~ .recipes-grid .recipe-card.salada {
+    display: flex;
+}
+
+/* Pie de Página */
+.footer-main {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+    border-top: 5px solid #ffcc00;
+}
+
+/* Adaptabilidad Responsiva */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .recipe-card {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Accesible de Recetas de Cocina</title>
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+    <!-- Encabezado Principal -->
+    <header class="header-main" role="banner">
+        <h1>Centro de Recetas Inclusivas</h1>
+        <p>Espacio accesible para compartir y aprender cocina para todas las personas.</p>
+    </header>
+
+    <!-- Barra de Navegación con enlaces internos -->
+    <nav class="nav-bar" aria-label="Navegación principal">
+        <ul class="nav-list">
+            <li><a href="#catalogo" class="nav-link">Catálogo de Recetas</a></li>
+            <li><a href="#mantenimiento" class="nav-link">Mantenimiento del Centro</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-container" id="contenido-principal">
+
+        <!-- Sección Catálogo con interacción estática Pure CSS -->
+        <section id="catalogo" class="section-block">
+            <h2 class="section-title">Catálogo de Recetas</h2>
+            
+            <p>Seleccione una categoría a continuación para filtrar las recetas que se muestran en el centro de la pantalla:</p>
+
+            <!-- Inputs de radio para control estático en CSS -->
+            <input type="radio" id="cat-todas" name="categoria" class="visually-hidden" checked>
+            <input type="radio" id="cat-dulces" name="categoria" class="visually-hidden">
+            <input type="radio" id="cat-saladas" name="categoria" class="visually-hidden">
+
+            <!-- Panel Visually Controllable por Teclado/Mouse -->
+            <div class="filter-container" aria-label="Selección de categoría de recetas">
+                <fieldset style="border:none;">
+                    <legend style="font-weight:bold; font-size: 1.2rem; margin-bottom: 0.5rem;">Categorías disponibles:</legend>
+                    <div class="filter-group">
+                        <label for="cat-todas" class="radio-label">
+                            Ver Todas las Recetas
+                        </label>
+                        <label for="cat-dulces" class="radio-label">
+                            Recetas Dulces
+                        </label>
+                        <label for="cat-saladas" class="radio-label">
+                            Recetas Saladas
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- Grilla centrada de Recetas -->
+            <div class="recipes-grid">
+
+                <!-- RECETA 1 (Dulce) -->
+                <article class="recipe-card dulce">
+                    <img src="imagenes/receta1.png" alt="Fotografía del Flan Casero con Dulce de Leche servido en un plato" class="recipe-image">
+                    <h3 class="recipe-name">Flan Casero con Dulce de Leche</h3>
+                    <a href="recetarios/receta1.pdf" class="btn-download" download="receta1.pdf" aria-label="Descargar receta completa de Flan Casero en formato PDF">
+                        Descargar Receta (PDF)
+                    </a>
+                </article>
+
+                <!-- RECETA 2 (Dulce) -->
+                <article class="recipe-card dulce">
+                    <img src="imagenes/receta2.png" alt="Fotografía de la Tarta de Manzana dorada al horno" class="recipe-image">
+                    <h3 class="recipe-name">Tarta de Manzana</h3>
+                    <a href="recetarios/receta2.pdf" class="btn-download" download="receta2.pdf" aria-label="Descargar receta completa de Tarta de Manzana en formato PDF">
+                        Descargar Receta (PDF)
+                    </a>
+                </article>
+
+                <!-- RECETA 3 (Dulce) -->
+                <article class="recipe-card dulce">
+                    <img src="imagenes/receta3.png" alt="Fotografía de porciones de Brownie de Chocolate con nueces" class="recipe-image">
+                    <h3 class="recipe-name">Brownie de Chocolate</h3>
+                    <a href="recetarios/receta3.pdf" class="btn-download" download="receta3.pdf" aria-label="Descargar receta completa de Brownie de Chocolate en formato PDF">
+                        Descargar Receta (PDF)
+                    </a>
+                </article>
+
+                <!-- RECETA 4 (Salada) -->
+                <article class="recipe-card salada">
+                    <img src="imagenes/receta4.png" alt="Fotografía de Empanadas Criollas horneadas" class="recipe-image">
+                    <h3 class="recipe-name">Empanadas Criollas</h3>
+                    <a href="recetarios/receta4.pdf" class="btn-download" download="receta4.pdf" aria-label="Descargar receta completa de Empanadas Criollas en formato PDF">
+                        Descargar Receta (PDF)
+                    </a>
+                </article>
+
+                <!-- RECETA 5 (Salada) -->
+                <article class="recipe-card salada">
+                    <img src="imagenes/receta5.png" alt="Fotografía de Pizza Margarita con queso y albahaca" class="recipe-image">
+                    <h3 class="recipe-name">Pizza Margarita</h3>
+                    <a href="recetarios/receta5.pdf" class="btn-download" download="receta5.pdf" aria-label="Descargar receta completa de Pizza Margarita en formato PDF">
+                        Descargar Receta (PDF)
+                    </a>
+                </article>
+
+                <!-- RECETA 6 (Salada) -->
+                <article class="recipe-card salada">
+                    <img src="imagenes/receta6.png" alt="Fotografía de Tarta de Espinaca y Queso cortada en porción" class="recipe-image">
+                    <h3 class="recipe-name">Tarta de Espinaca y Queso</h3>
+                    <a href="recetarios/receta6.pdf" class="btn-download" download="receta6.pdf" aria-label="Descargar receta completa de Tarta de Espinaca en formato PDF">
+                        Descargar Receta (PDF)
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sección Información de Mantenimiento -->
+        <section id="mantenimiento" class="section-block">
+            <h2 class="section-title">Quién Mantiene el Centro</h2>
+            <p>Este centro de cocina accesible es mantenido por el <strong>Equipo de Inclusión Digital y Gastronomía</strong>.</p>
+            <p>Nuestro objetivo principal es asegurar que todas las personas, independientemente de sus capacidades motrices, cognitivas o visuales, puedan acceder a recetas claras, bien estructuradas y fáciles de descargar.</p>
+        </section>
+
+        <!-- Sección Información de Contacto -->
+        <section id="contacto" class="section-block">
+            <h2 class="section-title">Información de Contacto</h2>
+            <p>Si desea enviar sugerencias o consultas relativas a la accesibilidad o al contenido del sitio, puede comunicarse con nosotros:</p>
+            <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                <li><strong>Correo Electrónico:</strong> contacto@recetasaccesibles.org</li>
+                <li><strong>Teléfono de Atención:</strong> +54 11 4444-5555</li>
+                <li><strong>Horario de Atención:</strong> Lunes a Viernes de 09:00 a 17:00 hs</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer-main">
+        <p>&copy; 2026 Centro de Recetas Accesibles - Diseñado bajo pautas de accesibilidad universal.</p>
+    </footer>
+
+</body>
+</html>
